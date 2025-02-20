@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { flamesMatch } from "./src/flames";
+const flamesMatch = require("./src/flames");
 
 const args = process.argv.slice(2);
 if (args.length !== 2) {
