@@ -1,10 +1,10 @@
 /**
  * Flames Match Calculator
- * @param name1 - First person's name
- * @param name2 - Second person's name
- * @returns Relationship result (Friends, Love, etc.)
+ * @param {string} name1 - First person's name
+ * @param {string} name2 - Second person's name
+ * @returns {string} - Relationship result (Friends, Love, etc.)
  */
-export function flamesMatch(name1: string, name2: string): string {
+function flamesMatch(name1, name2) {
   if (!name1 || !name2) throw new Error("Both names are required");
 
   // Convert names to lowercase and remove spaces
@@ -13,7 +13,7 @@ export function flamesMatch(name1: string, name2: string): string {
 
   // Count unmatched characters
   let combined = name1 + name2;
-  for (const char of name1) {
+  for (let char of name1) {
     if (name2.includes(char)) {
       combined = combined.replace(char, "");
       name2 = name2.replace(char, "");
@@ -28,7 +28,7 @@ export function flamesMatch(name1: string, name2: string): string {
     "Enemy",
     "Siblings",
   ];
-  const count = combined.length;
+  let count = combined.length;
 
   while (flames.length > 1) {
     let removeIndex = (count % flames.length) - 1;
@@ -41,3 +41,5 @@ export function flamesMatch(name1: string, name2: string): string {
 
   return flames[0];
 }
+
+module.exports = flamesMatch;

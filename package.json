@@ -2,10 +2,10 @@
   "name": "flames-match",
   "version": "1.0.2",
   "description": "A simple package to calculate Flames match results",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "bin": {
-    "flames": "dist/cli.js"
+    "flames": "./cli.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,7 @@
     "url": "https://github.com/praveenrampk/flames-match/issues"
   },
   "scripts": {
-    "build": "tsc",
-    "test": "ts-node tests/test.ts"
+    "test": "node tests/test.js"
   },
   "keywords": [
     "flames",
@@ -26,12 +25,5 @@
     "relationship"
   ],
   "author": "Praveen Ram",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^22.13.4",
-    "i": "^0.3.7",
-    "npm": "^11.1.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.7.3"
-  }
+  "license": "MIT"
 }
