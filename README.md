@@ -72,7 +72,7 @@ The result will be one of the following:
 Want to improve the package? Feel free to **fork** the repo and submit a **pull request**. Contributions are welcome! 😊  
 
 ```sh
-git clone https://github.com/yourusername/flames-match.git
+git clone https://github.com/praveenrampk/flames-match.git
 cd flames-match
 npm install
 npm run test
